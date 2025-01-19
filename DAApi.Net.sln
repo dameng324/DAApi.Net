@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_build", "build\_build.csproj", "{5A133274-8D31-4BE7-863A-70288A9980FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2736E32C-1317-4E98-875D-A7EEE3F03E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAApi.Net", "src\DAApi.Net\DAApi.Net.csproj", "{DCDD2685-0346-40E3-9128-41F7C43B91E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{00258CAB-0C9F-4125-86A0-ED6CE84B4403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAApi.Demo", "tests\DAApi.Demo\DAApi.Demo.csproj", "{AA5E9FE9-B3C5-4153-8A91-964949D1B868}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{6F092123-1735-4EAD-8CAD-D90BB09DF4F5}"
+	ProjectSection(SolutionItems) = preProject
+		.csharpierrc.json = .csharpierrc.json
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A133274-8D31-4BE7-863A-70288A9980FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A133274-8D31-4BE7-863A-70288A9980FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDD2685-0346-40E3-9128-41F7C43B91E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDD2685-0346-40E3-9128-41F7C43B91E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDD2685-0346-40E3-9128-41F7C43B91E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDD2685-0346-40E3-9128-41F7C43B91E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5E9FE9-B3C5-4153-8A91-964949D1B868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5E9FE9-B3C5-4153-8A91-964949D1B868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5E9FE9-B3C5-4153-8A91-964949D1B868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5E9FE9-B3C5-4153-8A91-964949D1B868}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCDD2685-0346-40E3-9128-41F7C43B91E3} = {2736E32C-1317-4E98-875D-A7EEE3F03E46}
+		{AA5E9FE9-B3C5-4153-8A91-964949D1B868} = {00258CAB-0C9F-4125-86A0-ED6CE84B4403}
+	EndGlobalSection
+EndGlobal

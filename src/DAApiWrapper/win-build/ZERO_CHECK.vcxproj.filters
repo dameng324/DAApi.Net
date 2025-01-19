@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Workspace\gitlab\DAApi.Net\src\DAApiWrapper\win-build\CMakeFiles\4d2d89c118965833ec53208094644e91\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{54EB3D7B-AB71-3EF6-859A-98F766C3B5BE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

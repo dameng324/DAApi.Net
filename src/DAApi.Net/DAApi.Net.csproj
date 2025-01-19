@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;net8.0;netstandard2.0;net45;net46;</TargetFrameworks>
+        <OutputType>Library</OutputType>
+        <Nullable>enable</Nullable>
+        <RepositoryType>git</RepositoryType>
+        <LangVersion>preview</LangVersion>
+        <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))">true</IsAotCompatible>
+        <Version>0.0.2</Version>
+        <PackageTags>Future;Esunny;ZhiDa;DAApi;Trade;CTP;China;Quant</PackageTags>
+        <RepositoryUrl>https://github.com/dameng324/DAApi.Net.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/dameng324/DAApi.Net</PackageProjectUrl>
+        <Title>DAApi.Net</Title>
+        <Description>ZhiDa Future Trade Api Wrapper for .NET platform</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="runtimes\**" />
+        <Content Remove="runtimes\**"/>
+        <EmbeddedResource Remove="runtimes\**" />
+        <None Include="runtimes\**\*.*">
+            <Pack>true</Pack>
+            <PackagePath>runtimes\%(RecursiveDir)%(FileName)%(Extension)</PackagePath>
+        </None>
+        <None Remove="runtimes\**\*.lib"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Condition="$(TargetFramework)=='netstandard2.0'" Include="System.Text.Encoding.CodePages" Version="9.0.0"/>
+    </ItemGroup>
+</Project>

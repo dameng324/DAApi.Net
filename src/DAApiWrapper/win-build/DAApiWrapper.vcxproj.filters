@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Workspace\gitlab\DAApi.Net\src\DAApiWrapper\swig_wrap.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Workspace\gitlab\DAApi.Net\src\DAApiWrapper\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D2A18A0D-7BD9-3732-8725-703E843A63EC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
