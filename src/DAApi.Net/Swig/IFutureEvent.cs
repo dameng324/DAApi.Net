@@ -58,135 +58,135 @@ public class IFutureEvent : global::System.IDisposable {
   }
 
   public virtual void OnFrontConnected() {
-    if (SwigDerivedClassHasMethod("OnFrontConnected", swigMethodTypes0)) DaApiWrapperPINVOKE.IFutureEvent_OnFrontConnectedSwigExplicitIFutureEvent(swigCPtr); else DaApiWrapperPINVOKE.IFutureEvent_OnFrontConnected(swigCPtr);
+     
   }
 
   public virtual void OnFrontDisconnected(int iReason) {
-    if (SwigDerivedClassHasMethod("OnFrontDisconnected", swigMethodTypes1)) DaApiWrapperPINVOKE.IFutureEvent_OnFrontDisconnectedSwigExplicitIFutureEvent(swigCPtr, iReason); else DaApiWrapperPINVOKE.IFutureEvent_OnFrontDisconnected(swigCPtr, iReason);
+     
   }
 
   public virtual void OnHeartBeatWarning(int iTimeLapse) {
-    if (SwigDerivedClassHasMethod("OnHeartBeatWarning", swigMethodTypes2)) DaApiWrapperPINVOKE.IFutureEvent_OnHeartBeatWarningSwigExplicitIFutureEvent(swigCPtr, iTimeLapse); else DaApiWrapperPINVOKE.IFutureEvent_OnHeartBeatWarning(swigCPtr, iTimeLapse);
+     
   }
 
   public virtual void OnRspNeedVerify(bool bFirstLogin, bool bHasSetQA) {
-    if (SwigDerivedClassHasMethod("OnRspNeedVerify", swigMethodTypes3)) DaApiWrapperPINVOKE.IFutureEvent_OnRspNeedVerifySwigExplicitIFutureEvent(swigCPtr, bFirstLogin, bHasSetQA); else DaApiWrapperPINVOKE.IFutureEvent_OnRspNeedVerify(swigCPtr, bFirstLogin, bHasSetQA);
+     
   }
 
   public virtual void OnRspUserLogin(CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUserLogin", swigMethodTypes4)) DaApiWrapperPINVOKE.IFutureEvent_OnRspUserLoginSwigExplicitIFutureEvent(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspUserLogin(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspUserLogout(CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes5)) DaApiWrapperPINVOKE.IFutureEvent_OnRspUserLogoutSwigExplicitIFutureEvent(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspUserLogout(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspVerifyCode(CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspVerifyCode", swigMethodTypes6)) DaApiWrapperPINVOKE.IFutureEvent_OnRspVerifyCodeSwigExplicitIFutureEvent(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspVerifyCode(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspSafeVerify(CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspSafeVerify", swigMethodTypes7)) DaApiWrapperPINVOKE.IFutureEvent_OnRspSafeVerifySwigExplicitIFutureEvent(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspSafeVerify(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspSetVerifyQA(CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspSetVerifyQA", swigMethodTypes8)) DaApiWrapperPINVOKE.IFutureEvent_OnRspSetVerifyQASwigExplicitIFutureEvent(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspSetVerifyQA(swigCPtr, CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspAccount(CFutureRspAccountField pRspAccount, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspAccount", swigMethodTypes9)) DaApiWrapperPINVOKE.IFutureEvent_OnRspAccountSwigExplicitIFutureEvent(swigCPtr, CFutureRspAccountField.getCPtr(pRspAccount), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspAccount(swigCPtr, CFutureRspAccountField.getCPtr(pRspAccount), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQuestion(CFutureRspQuestionField pRspVersion, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQuestion", swigMethodTypes10)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQuestionSwigExplicitIFutureEvent(swigCPtr, CFutureRspQuestionField.getCPtr(pRspVersion), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQuestion(swigCPtr, CFutureRspQuestionField.getCPtr(pRspVersion), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspOrderInsert(CFutureRspOrderInsertField pRspOrderInsert, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspOrderInsert", swigMethodTypes11)) DaApiWrapperPINVOKE.IFutureEvent_OnRspOrderInsertSwigExplicitIFutureEvent(swigCPtr, CFutureRspOrderInsertField.getCPtr(pRspOrderInsert), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspOrderInsert(swigCPtr, CFutureRspOrderInsertField.getCPtr(pRspOrderInsert), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspOrderModify(CFutureRspOrderInsertField pRspOrderModify, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspOrderModify", swigMethodTypes12)) DaApiWrapperPINVOKE.IFutureEvent_OnRspOrderModifySwigExplicitIFutureEvent(swigCPtr, CFutureRspOrderInsertField.getCPtr(pRspOrderModify), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspOrderModify(swigCPtr, CFutureRspOrderInsertField.getCPtr(pRspOrderModify), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspOrderCancel(CFutureRspOrderCancelField pRspOrderCancel, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspOrderCancel", swigMethodTypes13)) DaApiWrapperPINVOKE.IFutureEvent_OnRspOrderCancelSwigExplicitIFutureEvent(swigCPtr, CFutureRspOrderCancelField.getCPtr(pRspOrderCancel), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspOrderCancel(swigCPtr, CFutureRspOrderCancelField.getCPtr(pRspOrderCancel), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspPasswordUpdate(CFutureRspPasswordUpdateField pRspPasswordUpdate, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspPasswordUpdate", swigMethodTypes14)) DaApiWrapperPINVOKE.IFutureEvent_OnRspPasswordUpdateSwigExplicitIFutureEvent(swigCPtr, CFutureRspPasswordUpdateField.getCPtr(pRspPasswordUpdate), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspPasswordUpdate(swigCPtr, CFutureRspPasswordUpdateField.getCPtr(pRspPasswordUpdate), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRtnTrade(CFutureRspTradeField pRtnTrade, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRtnTrade", swigMethodTypes15)) DaApiWrapperPINVOKE.IFutureEvent_OnRtnTradeSwigExplicitIFutureEvent(swigCPtr, CFutureRspTradeField.getCPtr(pRtnTrade), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRtnTrade(swigCPtr, CFutureRspTradeField.getCPtr(pRtnTrade), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRtnOrder(CFutureRtnOrderField pRtnOrder, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRtnOrder", swigMethodTypes16)) DaApiWrapperPINVOKE.IFutureEvent_OnRtnOrderSwigExplicitIFutureEvent(swigCPtr, CFutureRtnOrderField.getCPtr(pRtnOrder), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRtnOrder(swigCPtr, CFutureRtnOrderField.getCPtr(pRtnOrder), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRtnCapital(CFutureRtnCapitalField pRtnCapital, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRtnCapital", swigMethodTypes17)) DaApiWrapperPINVOKE.IFutureEvent_OnRtnCapitalSwigExplicitIFutureEvent(swigCPtr, CFutureRtnCapitalField.getCPtr(pRtnCapital), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRtnCapital(swigCPtr, CFutureRtnCapitalField.getCPtr(pRtnCapital), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRtnPosition(CFutureRtnOrderField pRtnPosition, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRtnPosition", swigMethodTypes18)) DaApiWrapperPINVOKE.IFutureEvent_OnRtnPositionSwigExplicitIFutureEvent(swigCPtr, CFutureRtnOrderField.getCPtr(pRtnPosition), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRtnPosition(swigCPtr, CFutureRtnOrderField.getCPtr(pRtnPosition), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryOrder(CFutureRspOrderField pRspOrder, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryOrder", swigMethodTypes19)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryOrderSwigExplicitIFutureEvent(swigCPtr, CFutureRspOrderField.getCPtr(pRspOrder), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryOrder(swigCPtr, CFutureRspOrderField.getCPtr(pRspOrder), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryTrade(CFutureRspTradeField pRspTrade, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryTrade", swigMethodTypes20)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryTradeSwigExplicitIFutureEvent(swigCPtr, CFutureRspTradeField.getCPtr(pRspTrade), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryTrade(swigCPtr, CFutureRspTradeField.getCPtr(pRspTrade), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryCapital(CFutureRspCapitalField pRspCapital, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryCapital", swigMethodTypes21)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCapitalSwigExplicitIFutureEvent(swigCPtr, CFutureRspCapitalField.getCPtr(pRspCapital), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCapital(swigCPtr, CFutureRspCapitalField.getCPtr(pRspCapital), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryVersion(CFutureRspVersionField pRspVersion, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryVersion", swigMethodTypes22)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryVersionSwigExplicitIFutureEvent(swigCPtr, CFutureRspVersionField.getCPtr(pRspVersion), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryVersion(swigCPtr, CFutureRspVersionField.getCPtr(pRspVersion), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryPosition(CFutureRspPositionField pRspPosition, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryPosition", swigMethodTypes23)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryPositionSwigExplicitIFutureEvent(swigCPtr, CFutureRspPositionField.getCPtr(pRspPosition), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryPosition(swigCPtr, CFutureRspPositionField.getCPtr(pRspPosition), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryCurrency(CFutureRspCurrencyField pRspCurrency, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryCurrency", swigMethodTypes24)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCurrencySwigExplicitIFutureEvent(swigCPtr, CFutureRspCurrencyField.getCPtr(pRspCurrency), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCurrency(swigCPtr, CFutureRspCurrencyField.getCPtr(pRspCurrency), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryExchange(CFutureRspExchangeField pRspExchange, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryExchange", swigMethodTypes25)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryExchangeSwigExplicitIFutureEvent(swigCPtr, CFutureRspExchangeField.getCPtr(pRspExchange), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryExchange(swigCPtr, CFutureRspExchangeField.getCPtr(pRspExchange), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryStrategy(CFutureRspStrategyField pRspStrategy, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryStrategy", swigMethodTypes26)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryStrategySwigExplicitIFutureEvent(swigCPtr, CFutureRspStrategyField.getCPtr(pRspStrategy), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryStrategy(swigCPtr, CFutureRspStrategyField.getCPtr(pRspStrategy), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryCommodity(CFutureRspCommodityField pRspCommodity, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryCommodity", swigMethodTypes27)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCommoditySwigExplicitIFutureEvent(swigCPtr, CFutureRspCommodityField.getCPtr(pRspCommodity), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCommodity(swigCPtr, CFutureRspCommodityField.getCPtr(pRspCommodity), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryInstrument(CFutureRspInstrumentField pRspInstrument, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryInstrument", swigMethodTypes28)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryInstrumentSwigExplicitIFutureEvent(swigCPtr, CFutureRspInstrumentField.getCPtr(pRspInstrument), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryInstrument(swigCPtr, CFutureRspInstrumentField.getCPtr(pRspInstrument), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryExchangeTime(CFutureRspExchangeTimeField pRspExchangeTime, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryExchangeTime", swigMethodTypes29)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryExchangeTimeSwigExplicitIFutureEvent(swigCPtr, CFutureRspExchangeTimeField.getCPtr(pRspExchangeTime), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryExchangeTime(swigCPtr, CFutureRspExchangeTimeField.getCPtr(pRspExchangeTime), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryCommodityTime(CFutureRspCommodityTimeField pRspCommodityTime, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryCommodityTime", swigMethodTypes30)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCommodityTimeSwigExplicitIFutureEvent(swigCPtr, CFutureRspCommodityTimeField.getCPtr(pRspCommodityTime), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryCommodityTime(swigCPtr, CFutureRspCommodityTimeField.getCPtr(pRspCommodityTime), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryTotalPosition(CFutureRtnOrderField pRspTotalPosition, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryTotalPosition", swigMethodTypes31)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryTotalPositionSwigExplicitIFutureEvent(swigCPtr, CFutureRtnOrderField.getCPtr(pRspTotalPosition), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryTotalPosition(swigCPtr, CFutureRtnOrderField.getCPtr(pRspTotalPosition), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspQryStrategyDetail(CFutureRspStrategyDetailField pRspStrategyDetail, CFutureRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspQryStrategyDetail", swigMethodTypes32)) DaApiWrapperPINVOKE.IFutureEvent_OnRspQryStrategyDetailSwigExplicitIFutureEvent(swigCPtr, CFutureRspStrategyDetailField.getCPtr(pRspStrategyDetail), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IFutureEvent_OnRspQryStrategyDetail(swigCPtr, CFutureRspStrategyDetailField.getCPtr(pRspStrategyDetail), CFutureRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public IFutureEvent() : this(DaApiWrapperPINVOKE.new_IFutureEvent(), true) {
@@ -194,107 +194,73 @@ public class IFutureEvent : global::System.IDisposable {
   }
 
   private void SwigDirectorConnect() {
-    if (SwigDerivedClassHasMethod("OnFrontConnected", swigMethodTypes0))
+    
       swigDelegate0 = new SwigDelegateIFutureEvent_0(SwigDirectorMethodOnFrontConnected);
-    if (SwigDerivedClassHasMethod("OnFrontDisconnected", swigMethodTypes1))
+    
       swigDelegate1 = new SwigDelegateIFutureEvent_1(SwigDirectorMethodOnFrontDisconnected);
-    if (SwigDerivedClassHasMethod("OnHeartBeatWarning", swigMethodTypes2))
+    
       swigDelegate2 = new SwigDelegateIFutureEvent_2(SwigDirectorMethodOnHeartBeatWarning);
-    if (SwigDerivedClassHasMethod("OnRspNeedVerify", swigMethodTypes3))
+    
       swigDelegate3 = new SwigDelegateIFutureEvent_3(SwigDirectorMethodOnRspNeedVerify);
-    if (SwigDerivedClassHasMethod("OnRspUserLogin", swigMethodTypes4))
+    
       swigDelegate4 = new SwigDelegateIFutureEvent_4(SwigDirectorMethodOnRspUserLogin);
-    if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes5))
+    
       swigDelegate5 = new SwigDelegateIFutureEvent_5(SwigDirectorMethodOnRspUserLogout);
-    if (SwigDerivedClassHasMethod("OnRspVerifyCode", swigMethodTypes6))
+    
       swigDelegate6 = new SwigDelegateIFutureEvent_6(SwigDirectorMethodOnRspVerifyCode);
-    if (SwigDerivedClassHasMethod("OnRspSafeVerify", swigMethodTypes7))
+    
       swigDelegate7 = new SwigDelegateIFutureEvent_7(SwigDirectorMethodOnRspSafeVerify);
-    if (SwigDerivedClassHasMethod("OnRspSetVerifyQA", swigMethodTypes8))
+    
       swigDelegate8 = new SwigDelegateIFutureEvent_8(SwigDirectorMethodOnRspSetVerifyQA);
-    if (SwigDerivedClassHasMethod("OnRspAccount", swigMethodTypes9))
+    
       swigDelegate9 = new SwigDelegateIFutureEvent_9(SwigDirectorMethodOnRspAccount);
-    if (SwigDerivedClassHasMethod("OnRspQuestion", swigMethodTypes10))
+    
       swigDelegate10 = new SwigDelegateIFutureEvent_10(SwigDirectorMethodOnRspQuestion);
-    if (SwigDerivedClassHasMethod("OnRspOrderInsert", swigMethodTypes11))
+    
       swigDelegate11 = new SwigDelegateIFutureEvent_11(SwigDirectorMethodOnRspOrderInsert);
-    if (SwigDerivedClassHasMethod("OnRspOrderModify", swigMethodTypes12))
+    
       swigDelegate12 = new SwigDelegateIFutureEvent_12(SwigDirectorMethodOnRspOrderModify);
-    if (SwigDerivedClassHasMethod("OnRspOrderCancel", swigMethodTypes13))
+    
       swigDelegate13 = new SwigDelegateIFutureEvent_13(SwigDirectorMethodOnRspOrderCancel);
-    if (SwigDerivedClassHasMethod("OnRspPasswordUpdate", swigMethodTypes14))
+    
       swigDelegate14 = new SwigDelegateIFutureEvent_14(SwigDirectorMethodOnRspPasswordUpdate);
-    if (SwigDerivedClassHasMethod("OnRtnTrade", swigMethodTypes15))
+    
       swigDelegate15 = new SwigDelegateIFutureEvent_15(SwigDirectorMethodOnRtnTrade);
-    if (SwigDerivedClassHasMethod("OnRtnOrder", swigMethodTypes16))
+    
       swigDelegate16 = new SwigDelegateIFutureEvent_16(SwigDirectorMethodOnRtnOrder);
-    if (SwigDerivedClassHasMethod("OnRtnCapital", swigMethodTypes17))
+    
       swigDelegate17 = new SwigDelegateIFutureEvent_17(SwigDirectorMethodOnRtnCapital);
-    if (SwigDerivedClassHasMethod("OnRtnPosition", swigMethodTypes18))
+    
       swigDelegate18 = new SwigDelegateIFutureEvent_18(SwigDirectorMethodOnRtnPosition);
-    if (SwigDerivedClassHasMethod("OnRspQryOrder", swigMethodTypes19))
+    
       swigDelegate19 = new SwigDelegateIFutureEvent_19(SwigDirectorMethodOnRspQryOrder);
-    if (SwigDerivedClassHasMethod("OnRspQryTrade", swigMethodTypes20))
+    
       swigDelegate20 = new SwigDelegateIFutureEvent_20(SwigDirectorMethodOnRspQryTrade);
-    if (SwigDerivedClassHasMethod("OnRspQryCapital", swigMethodTypes21))
+    
       swigDelegate21 = new SwigDelegateIFutureEvent_21(SwigDirectorMethodOnRspQryCapital);
-    if (SwigDerivedClassHasMethod("OnRspQryVersion", swigMethodTypes22))
+    
       swigDelegate22 = new SwigDelegateIFutureEvent_22(SwigDirectorMethodOnRspQryVersion);
-    if (SwigDerivedClassHasMethod("OnRspQryPosition", swigMethodTypes23))
+    
       swigDelegate23 = new SwigDelegateIFutureEvent_23(SwigDirectorMethodOnRspQryPosition);
-    if (SwigDerivedClassHasMethod("OnRspQryCurrency", swigMethodTypes24))
+    
       swigDelegate24 = new SwigDelegateIFutureEvent_24(SwigDirectorMethodOnRspQryCurrency);
-    if (SwigDerivedClassHasMethod("OnRspQryExchange", swigMethodTypes25))
+    
       swigDelegate25 = new SwigDelegateIFutureEvent_25(SwigDirectorMethodOnRspQryExchange);
-    if (SwigDerivedClassHasMethod("OnRspQryStrategy", swigMethodTypes26))
+    
       swigDelegate26 = new SwigDelegateIFutureEvent_26(SwigDirectorMethodOnRspQryStrategy);
-    if (SwigDerivedClassHasMethod("OnRspQryCommodity", swigMethodTypes27))
+    
       swigDelegate27 = new SwigDelegateIFutureEvent_27(SwigDirectorMethodOnRspQryCommodity);
-    if (SwigDerivedClassHasMethod("OnRspQryInstrument", swigMethodTypes28))
+    
       swigDelegate28 = new SwigDelegateIFutureEvent_28(SwigDirectorMethodOnRspQryInstrument);
-    if (SwigDerivedClassHasMethod("OnRspQryExchangeTime", swigMethodTypes29))
+    
       swigDelegate29 = new SwigDelegateIFutureEvent_29(SwigDirectorMethodOnRspQryExchangeTime);
-    if (SwigDerivedClassHasMethod("OnRspQryCommodityTime", swigMethodTypes30))
+    
       swigDelegate30 = new SwigDelegateIFutureEvent_30(SwigDirectorMethodOnRspQryCommodityTime);
-    if (SwigDerivedClassHasMethod("OnRspQryTotalPosition", swigMethodTypes31))
+    
       swigDelegate31 = new SwigDelegateIFutureEvent_31(SwigDirectorMethodOnRspQryTotalPosition);
-    if (SwigDerivedClassHasMethod("OnRspQryStrategyDetail", swigMethodTypes32))
+    
       swigDelegate32 = new SwigDelegateIFutureEvent_32(SwigDirectorMethodOnRspQryStrategyDetail);
     DaApiWrapperPINVOKE.IFutureEvent_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12, swigDelegate13, swigDelegate14, swigDelegate15, swigDelegate16, swigDelegate17, swigDelegate18, swigDelegate19, swigDelegate20, swigDelegate21, swigDelegate22, swigDelegate23, swigDelegate24, swigDelegate25, swigDelegate26, swigDelegate27, swigDelegate28, swigDelegate29, swigDelegate30, swigDelegate31, swigDelegate32);
-  }
-
-  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
-    global::System.Reflection.MethodInfo[] methodInfos = this.GetType().GetMethods(
-        global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance);
-    foreach (global::System.Reflection.MethodInfo methodInfo in methodInfos) {
-      if (methodInfo.DeclaringType == null)
-        continue;
-
-      if (methodInfo.Name != methodName)
-        continue;
-
-      var parameters = methodInfo.GetParameters();
-      if (parameters.Length != methodTypes.Length)
-        continue;
-
-      bool parametersMatch = true;
-      for (var i = 0; i < parameters.Length; i++) {
-        if (parameters[i].ParameterType != methodTypes[i]) {
-          parametersMatch = false;
-          break;
-        }
-      }
-
-      if (!parametersMatch)
-        continue;
-
-      if (methodInfo.IsVirtual && (methodInfo.DeclaringType.IsSubclassOf(typeof(IFutureEvent))) &&
-        methodInfo.DeclaringType != methodInfo.GetBaseDefinition().DeclaringType) {
-        return true;
-      }
-    }
-
-    return false;
   }
 
   private void SwigDirectorMethodOnFrontConnected() {
@@ -496,40 +462,6 @@ public class IFutureEvent : global::System.IDisposable {
   private SwigDelegateIFutureEvent_30 swigDelegate30;
   private SwigDelegateIFutureEvent_31 swigDelegate31;
   private SwigDelegateIFutureEvent_32 swigDelegate32;
-
-  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] {  };
-  private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] { typeof(int) };
-  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] { typeof(int) };
-  private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] { typeof(bool), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes4 = new global::System.Type[] { typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] { typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] { typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] { typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes9 = new global::System.Type[] { typeof(CFutureRspAccountField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes10 = new global::System.Type[] { typeof(CFutureRspQuestionField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes11 = new global::System.Type[] { typeof(CFutureRspOrderInsertField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes12 = new global::System.Type[] { typeof(CFutureRspOrderInsertField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes13 = new global::System.Type[] { typeof(CFutureRspOrderCancelField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes14 = new global::System.Type[] { typeof(CFutureRspPasswordUpdateField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes15 = new global::System.Type[] { typeof(CFutureRspTradeField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes16 = new global::System.Type[] { typeof(CFutureRtnOrderField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes17 = new global::System.Type[] { typeof(CFutureRtnCapitalField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes18 = new global::System.Type[] { typeof(CFutureRtnOrderField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes19 = new global::System.Type[] { typeof(CFutureRspOrderField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes20 = new global::System.Type[] { typeof(CFutureRspTradeField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes21 = new global::System.Type[] { typeof(CFutureRspCapitalField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes22 = new global::System.Type[] { typeof(CFutureRspVersionField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes23 = new global::System.Type[] { typeof(CFutureRspPositionField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes24 = new global::System.Type[] { typeof(CFutureRspCurrencyField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes25 = new global::System.Type[] { typeof(CFutureRspExchangeField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes26 = new global::System.Type[] { typeof(CFutureRspStrategyField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes27 = new global::System.Type[] { typeof(CFutureRspCommodityField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes28 = new global::System.Type[] { typeof(CFutureRspInstrumentField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes29 = new global::System.Type[] { typeof(CFutureRspExchangeTimeField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes30 = new global::System.Type[] { typeof(CFutureRspCommodityTimeField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes31 = new global::System.Type[] { typeof(CFutureRtnOrderField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes32 = new global::System.Type[] { typeof(CFutureRspStrategyDetailField), typeof(CFutureRspInfoField), typeof(int), typeof(bool) };
 }
 
 }

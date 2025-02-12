@@ -58,39 +58,39 @@ public class IMarketEvent : global::System.IDisposable {
   }
 
   public virtual void OnFrontConnected() {
-    if (SwigDerivedClassHasMethod("OnFrontConnected", swigMethodTypes0)) DaApiWrapperPINVOKE.IMarketEvent_OnFrontConnectedSwigExplicitIMarketEvent(swigCPtr); else DaApiWrapperPINVOKE.IMarketEvent_OnFrontConnected(swigCPtr);
+     
   }
 
   public virtual void OnFrontDisconnected(int iReason) {
-    if (SwigDerivedClassHasMethod("OnFrontDisconnected", swigMethodTypes1)) DaApiWrapperPINVOKE.IMarketEvent_OnFrontDisconnectedSwigExplicitIMarketEvent(swigCPtr, iReason); else DaApiWrapperPINVOKE.IMarketEvent_OnFrontDisconnected(swigCPtr, iReason);
+     
   }
 
   public virtual void OnHeartBeatWarning(int iTimeLapse) {
-    if (SwigDerivedClassHasMethod("OnHeartBeatWarning", swigMethodTypes2)) DaApiWrapperPINVOKE.IMarketEvent_OnHeartBeatWarningSwigExplicitIMarketEvent(swigCPtr, iTimeLapse); else DaApiWrapperPINVOKE.IMarketEvent_OnHeartBeatWarning(swigCPtr, iTimeLapse);
+     
   }
 
   public virtual void OnRspRawData(string rawData) {
-    if (SwigDerivedClassHasMethod("OnRspRawData", swigMethodTypes3)) DaApiWrapperPINVOKE.IMarketEvent_OnRspRawDataSwigExplicitIMarketEvent(swigCPtr, rawData); else DaApiWrapperPINVOKE.IMarketEvent_OnRspRawData(swigCPtr, rawData);
+     
   }
 
   public virtual void OnRspUserLogin(CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUserLogin", swigMethodTypes4)) DaApiWrapperPINVOKE.IMarketEvent_OnRspUserLoginSwigExplicitIMarketEvent(swigCPtr, CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IMarketEvent_OnRspUserLogin(swigCPtr, CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspTradeDate(CMarketRspTradeDateField pRspTradeDate, CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspTradeDate", swigMethodTypes5)) DaApiWrapperPINVOKE.IMarketEvent_OnRspTradeDateSwigExplicitIMarketEvent(swigCPtr, CMarketRspTradeDateField.getCPtr(pRspTradeDate), CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IMarketEvent_OnRspTradeDate(swigCPtr, CMarketRspTradeDateField.getCPtr(pRspTradeDate), CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspBrokerData(CMarketRspBrokerDataField pRspBrokerData, CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspBrokerData", swigMethodTypes6)) DaApiWrapperPINVOKE.IMarketEvent_OnRspBrokerDataSwigExplicitIMarketEvent(swigCPtr, CMarketRspBrokerDataField.getCPtr(pRspBrokerData), CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IMarketEvent_OnRspBrokerData(swigCPtr, CMarketRspBrokerDataField.getCPtr(pRspBrokerData), CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspMarketData(CMarketRspMarketDataField pRspMarketData, CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspMarketData", swigMethodTypes7)) DaApiWrapperPINVOKE.IMarketEvent_OnRspMarketDataSwigExplicitIMarketEvent(swigCPtr, CMarketRspMarketDataField.getCPtr(pRspMarketData), CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IMarketEvent_OnRspMarketData(swigCPtr, CMarketRspMarketDataField.getCPtr(pRspMarketData), CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public virtual void OnRspUserLogout(CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes8)) DaApiWrapperPINVOKE.IMarketEvent_OnRspUserLogoutSwigExplicitIMarketEvent(swigCPtr, CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast); else DaApiWrapperPINVOKE.IMarketEvent_OnRspUserLogout(swigCPtr, CMarketRspInfoField.getCPtr(pRspInfo), iRequestID, bIsLast);
+     
   }
 
   public IMarketEvent() : this(DaApiWrapperPINVOKE.new_IMarketEvent(), true) {
@@ -98,59 +98,25 @@ public class IMarketEvent : global::System.IDisposable {
   }
 
   private void SwigDirectorConnect() {
-    if (SwigDerivedClassHasMethod("OnFrontConnected", swigMethodTypes0))
+    
       swigDelegate0 = new SwigDelegateIMarketEvent_0(SwigDirectorMethodOnFrontConnected);
-    if (SwigDerivedClassHasMethod("OnFrontDisconnected", swigMethodTypes1))
+    
       swigDelegate1 = new SwigDelegateIMarketEvent_1(SwigDirectorMethodOnFrontDisconnected);
-    if (SwigDerivedClassHasMethod("OnHeartBeatWarning", swigMethodTypes2))
+    
       swigDelegate2 = new SwigDelegateIMarketEvent_2(SwigDirectorMethodOnHeartBeatWarning);
-    if (SwigDerivedClassHasMethod("OnRspRawData", swigMethodTypes3))
+    
       swigDelegate3 = new SwigDelegateIMarketEvent_3(SwigDirectorMethodOnRspRawData);
-    if (SwigDerivedClassHasMethod("OnRspUserLogin", swigMethodTypes4))
+    
       swigDelegate4 = new SwigDelegateIMarketEvent_4(SwigDirectorMethodOnRspUserLogin);
-    if (SwigDerivedClassHasMethod("OnRspTradeDate", swigMethodTypes5))
+    
       swigDelegate5 = new SwigDelegateIMarketEvent_5(SwigDirectorMethodOnRspTradeDate);
-    if (SwigDerivedClassHasMethod("OnRspBrokerData", swigMethodTypes6))
+    
       swigDelegate6 = new SwigDelegateIMarketEvent_6(SwigDirectorMethodOnRspBrokerData);
-    if (SwigDerivedClassHasMethod("OnRspMarketData", swigMethodTypes7))
+    
       swigDelegate7 = new SwigDelegateIMarketEvent_7(SwigDirectorMethodOnRspMarketData);
-    if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes8))
+    
       swigDelegate8 = new SwigDelegateIMarketEvent_8(SwigDirectorMethodOnRspUserLogout);
     DaApiWrapperPINVOKE.IMarketEvent_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8);
-  }
-
-  private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
-    global::System.Reflection.MethodInfo[] methodInfos = this.GetType().GetMethods(
-        global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance);
-    foreach (global::System.Reflection.MethodInfo methodInfo in methodInfos) {
-      if (methodInfo.DeclaringType == null)
-        continue;
-
-      if (methodInfo.Name != methodName)
-        continue;
-
-      var parameters = methodInfo.GetParameters();
-      if (parameters.Length != methodTypes.Length)
-        continue;
-
-      bool parametersMatch = true;
-      for (var i = 0; i < parameters.Length; i++) {
-        if (parameters[i].ParameterType != methodTypes[i]) {
-          parametersMatch = false;
-          break;
-        }
-      }
-
-      if (!parametersMatch)
-        continue;
-
-      if (methodInfo.IsVirtual && (methodInfo.DeclaringType.IsSubclassOf(typeof(IMarketEvent))) &&
-        methodInfo.DeclaringType != methodInfo.GetBaseDefinition().DeclaringType) {
-        return true;
-      }
-    }
-
-    return false;
   }
 
   private void SwigDirectorMethodOnFrontConnected() {
