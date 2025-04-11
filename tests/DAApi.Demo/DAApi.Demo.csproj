@@ -7,8 +7,9 @@
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <TargetFramework>net45</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ShowDAApiIncludeFile>true</ShowDAApiIncludeFile>
   </PropertyGroup>
   <ItemGroup>
-        <PackageReference Include="DAApi.Net" Version="0.0.2" />
+        <PackageReference Include="DAApi.Net" Version="1.0.0-test2" />
   </ItemGroup>
 </Project>
