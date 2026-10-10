@@ -1,151 +1,97 @@
 # DAApi.Net
 
 [![NuGet](https://img.shields.io/nuget/v/DAApi.Net.svg)](https://www.nuget.org/packages/DAApi.Net)
+[![CI](https://github.com/dameng324/DAApi.Net/actions/workflows/ci.yml/badge.svg)](https://github.com/dameng324/DAApi.Net/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-DAApi.Net is a .NET library for the DAApi Futures API which is popular worldwide future market trade api in China. 
-This project is a wrapper of the DAApi C++ API using swig.
+直达期货 API 的 .NET 封装，包含期货、行情和股票接口。项目通过 SWIG 生成 C# 绑定，并处理 GB2312 字符串编码。
 
-Please read FAQ before using this library.[FAQ](#faq)
+## 支持范围
 
-## Features
+| 项目 | 支持范围 |
+|---|---|
+| .NET 目标框架 | .NET 8、.NET 10、.NET Framework 4.5、.NET Standard 2.0 |
+| 原生运行时 | Windows x64（win-x64）、Linux x64（linux-x64） |
+| API | 期货、行情、股票 |
 
-- Support DAApi Trade API
-- Support .NET Framework 4.5, .NET Standard 2.0, .NET 8, and .NET 10
-- Auto copy the native dlls to the output directory
-- Native AOT support
-- Solved the GB2312 encoding problem
+.NET 8 和 .NET 10 目标设置了 IsAotCompatible=true。发布应用时，RID 仍须与上表中的原生运行时匹配。
 
+## 安装
 
-## Installation
-
-```bash
+~~~bash
 dotnet add package DAApi.Net
-```
+~~~
 
-## Usage
+## 快速开始
 
-```csharpusing System;
-using System.Threading.Tasks;
+下面展示行情 API 的创建和版本查询。接收回调和登录请求时，请按接口要求实现 IMarketEvent。
+
+~~~csharp
+using System;
 using DAApi.Net;
 
-Console.WriteLine($"ITapTradeAPIVersion:{CMarketApi.GetVersion()}");
+Console.WriteLine(CMarketApi.GetVersion());
+var marketApi = CMarketApi.CreateMarketApi(false);
+~~~
 
-int ret = 0;
-var api = CMarketApi.CreateMarketApi(false);
+CFutureApi 和 CStockApi 分别提供期货和股票接口。
 
-var spi = new SpiImpl(api);
-api.RegisterSpi(spi);
+## API 版本
 
-api.RegisterNameServer("tcp://127.0.0.1:1234");
-api.Init();
+仓库中记录的 DAApi 版本为 1.18.2.0。运行时可通过对应 API 的 GetVersion() 查询版本。
 
-await Task.Delay(100000);
+## 原生依赖
 
-public class SpiImpl : IMarketEvent
-{
-    public SpiImpl(CMarketApi api)
-    {
-        Api = api;
-    }
+NuGet 包包含以下平台目录中的原生库：
 
-    public CMarketApi Api { get; }
+- Windows x64：runtimes/win-x64/native
+- Linux x64：runtimes/linux-x64/native
 
-    public override void OnFrontConnected()
-    {
-        Console.WriteLine("OnFrontConnected");
+发布应用时，将 RuntimeIdentifier 设置为 win-x64 或 linux-x64，以选择目标平台对应的原生依赖。
 
-        var ret = Api.ReqUserLogin(
-            new CMarketReqUserLoginField
-            {
-                UserId = "UserId",
-                UserPwd = "Password",
-                SoftwareName = "SoftwareName",
-                SoftwareVersion = "SoftwareVersion",
-                AuthorCode = "AuthCode",
-                BrokerIDForMarketPrice = "BrokerIdForMarketPrice",
-            },
-            0
-        );
-        Console.WriteLine($"ReqUserLogin ret:{ret}");
-    }
+## 构建
 
-    public override void OnRspUserLogin(CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast)
-    {
-        Console.WriteLine($"OnRspUserLogin pRspInfo:{pRspInfo} iRequestID:{iRequestID} bIsLast:{bIsLast}");
-    }
+### 环境与本地构建
 
-    public override void OnFrontDisconnected(int iReason)
-    {
-        Console.WriteLine($"OnFrontDisconnected iReason:{iReason}");
-    }
+- 使用 global.json 指定的 .NET SDK，并在仓库根目录执行 dotnet tool restore。
+- 使用 .swig-version 指定的 SWIG 版本。
+- 原生构建需要 CMake 和对应平台的 C++ 工具链。Windows 使用 Git Bash 和 Visual Studio C++ 工具；Linux 构建可在 Linux 或 WSL2 中运行。
 
-    public override void OnRspMarketData(
-        CMarketRspMarketDataField pRspMarketData,
-        CMarketRspInfoField pRspInfo,
-        int iRequestID,
-        bool bIsLast
-    )
-    {
-        Console.WriteLine($"OnRspMarketData pRspMarketData:{pRspMarketData} pRspInfo:{pRspInfo} iRequestID:{iRequestID} bIsLast:{bIsLast}");
-    }
-}
-```
+SWIG 生成的 C# 和 C++ 文件不提交到 Git。每次本地构建前，进入 SWIG 项目重新生成：
 
-## Build
-
-### Requirements
-
-Use the .NET SDK pinned in `global.json` and restore the repository tools:
-
-```bash
-dotnet tool restore
-```
-
-SWIG must match the version in `.swig-version` (currently 4.5.1). CI runs SWIG generation on Ubuntu 24.04 and builds the Windows wrapper and NuGet package on windows-latest. Windows native builds use CMake 4.3 or later with Visual Studio 2026.
-
-### Regenerate SWIG bindings
-
-Generated C# and C++ files are not tracked in Git. CI regenerates them before compiling. Before each local solution build, regenerate the bindings from the pinned SWIG version:
-
-```bash
+~~~bash
 cd src/DAApiWrapper
-dotnet tool restore
 bash ./SwigGenerate.sh
-cd ../..
-```
+~~~
 
-The script runs this repository's C# post-processing and formatting steps.
+在 Git Bash 中构建 Windows 原生库：
 
-### Build the solution
-
-```bash
-dotnet build DAApi.Net.slnx --configuration Release
-```
-
-### Build native wrappers
-
-Build the Windows wrapper from Git Bash and the Linux wrapper from WSL2. Run these commands from `src/DAApiWrapper`:
-
-```bash
+~~~bash
 bash ./win-build.sh
-bash ./linux-build.sh
-```
+~~~
 
+在 Linux 或 WSL2 中构建 Linux 原生库：
+
+~~~bash
+bash ./linux-build.sh
+~~~
+
+回到仓库根目录构建解决方案并检查格式：
+
+~~~bash
+cd ../..
+dotnet build DAApi.Net.slnx --configuration Release
+dotnet tool run csharpier check .
+~~~
 
 ### GitHub Actions
 
-Pull requests and pushes to `main` run `.github/workflows/ci.yml`. It calls `.github/workflows/build.yml` to generate SWIG bindings on Linux, build the Windows wrapper, and pack the NuGet package; the `.nupkg` is uploaded as a 30-day workflow artifact. All workflow run steps use Bash, including Git Bash on Windows. `.github/workflows/publish.yml` calls the same build workflow, then publishes to NuGet for a `vX.Y.Z` tag or a manual run from `main` with a supplied version; tag publishing also creates a GitHub Release.
+向 main 提交 PR 或推送提交时，ci.yml 调用共享的 build.yml：Ubuntu job 生成 SWIG 绑定并构建 Linux 原生库，Windows job 构建 Windows 原生库、构建解决方案并打包 NuGet。CI 不会发布到 NuGet；生成的 nupkg 会作为保留 30 天的 workflow artifact。
 
-## FAQ
+publish.yml 复用同一构建流程。推送 v 前缀版本 tag 会发布 NuGet 包并创建 GitHub Release；也可以在 main 上手动运行该 workflow，并填写不带 v 前缀的版本号。
 
-### The version of the DAApi API?
+## 许可证
 
-ApiVersion:1.18.2.0
+[MIT License](LICENSE)
 
-### dll doesn't copy to the output directory?
-
-set `RuntimeIdentifier` to `win-x64` in the project file.
-
-## License
-
-MIT License
+问题与建议请提交到 [GitHub Issues](https://github.com/dameng324/DAApi.Net/issues)。
