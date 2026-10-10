@@ -54,12 +54,7 @@ public class SpiImpl : IMarketEvent
         Console.WriteLine($"OnFrontDisconnected iReason:{iReason}");
     }
 
-    public override void OnRspMarketData(
-        CMarketRspMarketDataField pRspMarketData,
-        CMarketRspInfoField pRspInfo,
-        int iRequestID,
-        bool bIsLast
-    )
+    public override void OnRspMarketData(CMarketRspMarketDataField pRspMarketData, CMarketRspInfoField pRspInfo, int iRequestID, bool bIsLast)
     {
         Console.WriteLine($"OnRspMarketData pRspMarketData:{pRspMarketData} pRspInfo:{pRspInfo} iRequestID:{iRequestID} bIsLast:{bIsLast}");
     }

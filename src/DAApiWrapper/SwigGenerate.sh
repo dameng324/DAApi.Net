@@ -1,15 +1,19 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-# 获取脚本所在目录的绝对路径
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
-# 获取当前工作目录
-CURRENT_DIR="$(pwd)"
-
-# 比较路径，如果不同则退出
-if [ "$SCRIPT_DIR" != "$CURRENT_DIR" ]; then
-    echo "Error: This script must be run from its own directory ($SCRIPT_DIR)."
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
+EXPECTED_SWIG_VERSION="$(tr -d '\r\n' < "$SCRIPT_DIR/../../.swig-version")"
+ACTUAL_SWIG_VERSION="$(swig -version | awk '/SWIG Version/ {print $3; exit}')"
+if [[ "$ACTUAL_SWIG_VERSION" != "$EXPECTED_SWIG_VERSION" ]]; then
+    echo "Error: Expected SWIG $EXPECTED_SWIG_VERSION but found $ACTUAL_SWIG_VERSION." >&2
     exit 1
 fi
 
-mkdir -p ../DAApi.Net/Swig && swig -c++ -csharp -namespace DAApi.Net -outdir ../DAApi.Net/Swig/ swig.i
+mkdir -p ../DAApi.Net/Swig/
+swig -c++ -csharp -namespace DAApi.Net -outdir ../DAApi.Net/Swig/ swig.i
+dotnet StripSwigDerivedChecks.cs -- --no-backup \
+  "../DAApi.Net/Swig/IMarketEvent.cs" \
+  "../DAApi.Net/Swig/IFutureEvent.cs" \
+  "../DAApi.Net/Swig/IStockEvent.cs"
+dotnet tool run csharpier format ../DAApi.Net/Swig

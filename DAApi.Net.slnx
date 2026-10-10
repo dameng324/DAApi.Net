@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/items/">
+    <File Path=".csharpierrc.json" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="global.json" />
+    <File Path="ReadMe.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/DAApi.Net/DAApi.Net.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DAApi.Demo/DAApi.Demo.csproj" />
+  </Folder>
+</Solution>

@@ -10,7 +10,7 @@ Please read FAQ before using this library.[FAQ](#faq)
 ## Features
 
 - Support DAApi Trade API
-- Support .Net framework 4.5 and .Net Standard 2.0 and Modern .Net6 and .Net8
+- Support .NET Framework 4.5, .NET Standard 2.0, .NET 8, and .NET 10
 - Auto copy the native dlls to the output directory
 - Native AOT support
 - Solved the GB2312 encoding problem
@@ -91,20 +91,49 @@ public class SpiImpl : IMarketEvent
 }
 ```
 
-## Build from source
+## Build
 
-### Prerequisites
+### Requirements
 
-- dotnet sdk 8.0 or later
-- swig 4.3.0 or later, use `scoop install swig` to install swig on windows, do not use `winget`.
-- cmake 3.31.3 or later.
+Use the .NET SDK pinned in `global.json` and restore the repository tools:
 
-### Build
+```bash
+dotnet tool restore
+```
 
-1. Clone the repository and open the solution file `DAApi.Net.sln` with Visual Studio 2022.
-2. run the command in `DAApiApi/SwigGenerator.sh` to generate the cpp and C# wrapper code.
-3. run `win-build.sh` for windows native build or `linux-build.sh` for linux native build.
-4. Build the `DAApi.Net` C# project.
+SWIG must match the version in `.swig-version` (currently 4.5.1). CI runs SWIG generation on Ubuntu 24.04 and builds the Windows wrapper and NuGet package on windows-latest. Windows native builds use CMake 4.3 or later with Visual Studio 2026.
+
+### Build the solution
+
+```bash
+dotnet build DAApi.Net.slnx --configuration Release
+```
+
+### Regenerate SWIG bindings
+
+From Ubuntu 24.04 in WSL2, run:
+
+```bash
+cd src/DAApiWrapper
+dotnet tool restore
+bash ./SwigGenerate.sh
+```
+
+This regenerates the C++ and C# wrappers, applies the shared C# post-processing, and formats the generated C# files.
+
+### Build native wrappers
+
+Build the Windows wrapper from Git Bash and the Linux wrapper from WSL2. Run these commands from `src/DAApiWrapper`:
+
+```bash
+bash ./win-build.sh
+bash ./linux-build.sh
+```
+
+
+### GitHub Actions
+
+Pull requests and pushes to `main` run the Linux generation job followed by the Windows build job. Workflow steps use Bash on both runners (Git Bash on Windows). The Linux job uploads generated C# files, SWIG wrapper sources, and the Linux native library when the SDK provides one. A `vX.Y.Z` tag publishes the NuGet package and creates a GitHub Release. Manual publishing runs from `main` and requires a version without the `v` prefix.
 
 ## FAQ
 

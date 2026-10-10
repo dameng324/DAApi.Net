@@ -13,6 +13,7 @@
 %feature("director") IMarketEvent;
 %feature("director") IFutureEvent;
 %feature("director") IStockEvent;
+%copyctor;
 %include "include/DADataType.h"
 %include "include/DAMarketStruct.h"
 %include "include/DAMarketApi.h"
